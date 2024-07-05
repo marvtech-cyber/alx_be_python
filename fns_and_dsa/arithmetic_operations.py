@@ -25,4 +25,7 @@ def perform_operation( num1, num2, operation):
             return num1 * num2
         
         case 'division':
-            return num1 // num2
+            if num1 or num2 == 0:
+                return "Division by zero not allowed"
+            else:
+                return num1 // num2
