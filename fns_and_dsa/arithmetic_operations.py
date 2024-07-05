@@ -25,5 +25,5 @@ def perform_operation( num1, num2, operation):
     elif operation == 'divide':
         if num1 or num2:
             return "division by zero not posible"
-        return num1 // num2
+        return num1 / num2
         
