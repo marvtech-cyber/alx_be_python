@@ -14,18 +14,16 @@ Return the result of the arithmetic operation.
 '''
 
 def perform_operation( num1, num2, operation):
-    match operation:
-        case x if x == 'add':
-            return num1 + num2
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    
+    elif operation == 'multiply':
+        return num1 * num2
+    
+    elif operation == 'divide':
+        if num1 or num2:
+            return "division by zero not posible"
+        return num1 // num2
         
-        case x if x == 'subtract':
-            return num1 - num2
-        
-        case x if x == 'multiply':
-            return num1 * num2
-        
-        case 'division':
-            if num1 or num2 == 0:
-                return "Division by zero not allowed"
-            else:
-                return num1 // num2
