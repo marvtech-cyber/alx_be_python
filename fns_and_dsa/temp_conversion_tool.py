@@ -27,7 +27,7 @@ if user_temperature.isdecimal() == True:
         conversion = convert_to_celsius(user_temperature)
         print(f"{user_temperature}°F is {conversion}°C")
 else:
-    print("Please enter a numeric value.")
+    print("Invalid temperature. Please enter a numeric value.")
 
 
 
