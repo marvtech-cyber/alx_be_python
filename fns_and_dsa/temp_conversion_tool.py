@@ -13,14 +13,22 @@ def convert_to_fahrenheit(celsius: float):
     temp = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return temp
 
-user_temperature = float(input("Enter the temperature to convert: "))
-temp_type = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
+user_temperature = input("Enter the temperature to convert: ")
+if user_temperature.isdecimal() == True:
+    user_temperature = float(user_temperature)
 
-if temp_type == 'C':
-    conversion = convert_to_fahrenheit(user_temperature)
-    print(f"{user_temperature}°C is {conversion}°F")
+    temp_type = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 
-elif temp_type == 'F':
-    conversion = convert_to_celsius(user_temperature)
-    print(f"{user_temperature}°F is {conversion}°C")
-    
+    if temp_type == 'C':
+        conversion = convert_to_fahrenheit(user_temperature)
+        print(f"{user_temperature}°C is {conversion}°F")
+
+    elif temp_type == 'F':
+        conversion = convert_to_celsius(user_temperature)
+        print(f"{user_temperature}°F is {conversion}°C")
+else:
+    print("Please enter a numeric value.")
+
+
+
+
